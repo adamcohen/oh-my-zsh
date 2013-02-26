@@ -64,6 +64,11 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
+# want M-w to copy region instead of kill it
+bindkey '\ew' kill-region
+bindkey -s '\ej' "ls\n"
+bindkey -s '\e.' "..\n"
+
 bindkey '^[^[[C' emacs-forward-word
 bindkey '^[^[[D' emacs-backward-word
 
