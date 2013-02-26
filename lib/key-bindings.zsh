@@ -68,6 +68,12 @@ bindkey '\C-x\C-e' edit-command-line
 bindkey "^[m" copy-prev-shell-word
 
 # consider emacs keybindings:
+
+# want M-w to copy region instead of kill it
+bindkey '\ew' kill-region
+bindkey -s '\ej' "ls\n"
+bindkey -s '\e.' "..\n"
+
 bindkey '^[^[[C' emacs-forward-word
 bindkey '^[^[[D' emacs-backward-word
 
